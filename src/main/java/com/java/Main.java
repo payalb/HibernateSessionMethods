@@ -58,7 +58,6 @@ public void deleteStudent() {
 	Transaction tx=session.beginTransaction();
 	Student student= new Student(1, "Payal", "10R, delhi road, Opp. ramlila ground");
 	session.delete(student);
-	//If data already exist, save will throw an error
 	tx.commit();
 	session.close();
 	
@@ -77,7 +76,7 @@ public void getStudentById(int id) {
 }
 
 public void getStudents() {
-	
+	//No session method for this
 /*	Session session= sf.openSession();
 	Transaction tx=session.beginTransaction();
 	Student st=session.get(Student.class);
