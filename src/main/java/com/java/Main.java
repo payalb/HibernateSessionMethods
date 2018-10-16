@@ -13,7 +13,7 @@ public class Main {
 	
 	static SessionFactory sf;
 	static {
-			Configuration cfg=new Configuration().addPackage("com.java.dto");
+			Configuration cfg=new Configuration();
 		//create the schema
 			cfg.setProperty(Environment.HBM2DDL_AUTO, "create");
 			cfg.addAnnotatedClass(Student.class);
